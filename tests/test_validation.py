@@ -1,6 +1,8 @@
-import pytest
 import pandas as pd
+import pytest
+
 from src.validation import DataValidator
+
 
 @pytest.fixture
 def valid_reviews():

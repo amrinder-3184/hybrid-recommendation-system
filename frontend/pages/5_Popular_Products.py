@@ -1,5 +1,6 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
+
 from frontend.api_client import get_popular
 
 st.set_page_config(page_title="Popular Products", page_icon="🔥", layout="wide")

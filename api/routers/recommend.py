@@ -1,7 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
+
 from api.dependencies.model_dep import get_inference_service
-from api.services.inference_service import InferenceService
 from api.schemas.responses import RecommendationResponse, SimilarUsersResponse
+from api.services.inference_service import InferenceService
 
 router = APIRouter(prefix="", tags=["recommendations"])
 

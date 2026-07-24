@@ -1,13 +1,15 @@
 import os
-import pytest
-import pandas as pd
-import numpy as np
-import scipy.sparse as sp
 import pickle
-import json
-from src.hybrid import HybridRecommender
-from src.content_based import ContentBasedRecommender
+
+import numpy as np
+import pandas as pd
+import pytest
+import scipy.sparse as sp
+
 from src.collaborative import CollaborativeRecommender
+from src.content_based import ContentBasedRecommender
+from src.hybrid import HybridRecommender
+
 
 @pytest.fixture
 def config(tmp_path):

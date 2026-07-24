@@ -1,5 +1,7 @@
-import nbformat as nbf
 import os
+
+import nbformat as nbf
+
 
 def generate_eda_notebook():
     nb = nbf.v4.new_notebook()

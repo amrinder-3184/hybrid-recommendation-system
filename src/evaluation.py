@@ -1,7 +1,8 @@
-import numpy as np
-from typing import List, Dict
 
-def precision_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) -> float:
+import numpy as np
+
+
+def precision_at_k(actual: list[list[str]], predicted: list[list[str]], k: int = 10) -> float:
     precisions = []
     for a, p in zip(actual, predicted):
         p_k = p[:k]
@@ -12,7 +13,7 @@ def precision_at_k(actual: List[List[str]], predicted: List[List[str]], k: int =
         precisions.append(num_hits / k)
     return float(np.mean(precisions)) if precisions else 0.0
 
-def recall_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) -> float:
+def recall_at_k(actual: list[list[str]], predicted: list[list[str]], k: int = 10) -> float:
     recalls = []
     for a, p in zip(actual, predicted):
         p_k = p[:k]
@@ -23,7 +24,7 @@ def recall_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10
         recalls.append(num_hits / len(a))
     return float(np.mean(recalls)) if recalls else 0.0
 
-def map_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) -> float:
+def map_at_k(actual: list[list[str]], predicted: list[list[str]], k: int = 10) -> float:
     """Computes Mean Average Precision at K"""
     maps = []
     for a, p in zip(actual, predicted):
@@ -40,7 +41,7 @@ def map_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) -
         maps.append(sum_precisions / min(len(a), k))
     return float(np.mean(maps)) if maps else 0.0
 
-def ndcg_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) -> float:
+def ndcg_at_k(actual: list[list[str]], predicted: list[list[str]], k: int = 10) -> float:
     """Computes Normalized Discounted Cumulative Gain at K"""
     ndcgs = []
     for a, p in zip(actual, predicted):
@@ -54,10 +55,10 @@ def ndcg_at_k(actual: List[List[str]], predicted: List[List[str]], k: int = 10) 
     return float(np.mean(ndcgs)) if ndcgs else 0.0
 
 class Evaluator:
-    def __init__(self, k_values: List[int] = [10]):
+    def __init__(self, k_values: list[int] = [10]):
         self.k_values = k_values
 
-    def evaluate(self, actual: List[List[str]], predicted: List[List[str]]) -> Dict[str, float]:
+    def evaluate(self, actual: list[list[str]], predicted: list[list[str]]) -> dict[str, float]:
         metrics = {}
         for k in self.k_values:
             metrics[f"Precision@{k}"] = precision_at_k(actual, predicted, k)

@@ -1,12 +1,14 @@
 import os
-import time
 import pickle
+import time
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from lightfm import LightFM
-from lightfm.evaluation import precision_at_k, recall_at_k, auc_score
 from lightfm.cross_validation import random_train_test_split
+from lightfm.evaluation import auc_score, precision_at_k, recall_at_k
+
 from src.utils import get_logger, load_config
 
 logger = get_logger(__name__)

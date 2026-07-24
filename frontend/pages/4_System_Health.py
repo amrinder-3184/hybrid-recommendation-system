@@ -1,4 +1,5 @@
 import streamlit as st
+
 from frontend.api_client import get_health
 
 st.set_page_config(page_title="System Health", page_icon="🩺", layout="wide")

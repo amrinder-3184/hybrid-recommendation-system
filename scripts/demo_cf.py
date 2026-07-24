@@ -1,8 +1,11 @@
 import argparse
-import scipy.sparse as sp
 import os
+
+import scipy.sparse as sp
+
 from src.collaborative import CollaborativeRecommender
 from src.utils import load_config
+
 
 def demo_cli():
     print("Initializing Collaborative Filtering Demo...")
@@ -18,7 +21,7 @@ def demo_cli():
     recommender = CollaborativeRecommender(config)
     try:
         recommender.load()
-    except Exception as e:
+    except Exception:
         print("Failed to load artifacts. Please train the Collaborative model first.")
         return
 

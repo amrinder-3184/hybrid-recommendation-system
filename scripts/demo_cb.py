@@ -1,6 +1,8 @@
 import argparse
+
 from src.content_based import ContentBasedRecommender
 from src.utils import load_config
+
 
 def demo_cli():
     print("Initializing Content-Based Recommender Demo...")
@@ -8,7 +10,7 @@ def demo_cli():
     recommender = ContentBasedRecommender(config)
     try:
         recommender.load()
-    except Exception as e:
+    except Exception:
         print("Failed to load artifacts. Please run Phase 1 and Phase 2 training first.")
         return
 

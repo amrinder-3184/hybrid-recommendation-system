@@ -1,8 +1,10 @@
 import time
+
 from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from api.routers import recommend, health
+from fastapi.responses import JSONResponse
+
+from api.routers import health, recommend
 from src.utils import get_logger
 
 logger = get_logger("api")

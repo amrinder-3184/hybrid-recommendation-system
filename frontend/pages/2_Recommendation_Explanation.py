@@ -1,4 +1,5 @@
 import streamlit as st
+
 from frontend.api_client import get_user_recommendations
 
 st.set_page_config(page_title="Recommendation Explanation", page_icon="🔍", layout="wide")

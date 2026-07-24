@@ -1,5 +1,6 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
+
 from frontend.api_client import get_user_recommendations
 
 st.set_page_config(page_title="User Recommendations", page_icon="👤", layout="wide")

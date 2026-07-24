@@ -1,4 +1,5 @@
-from api.services.inference_service import inference_service, InferenceService
+from api.services.inference_service import InferenceService, inference_service
+
 
 def get_inference_service() -> InferenceService:
     if not inference_service.initialized:

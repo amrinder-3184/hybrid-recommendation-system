@@ -1,8 +1,11 @@
 import argparse
-import pandas as pd
 import os
+
+import pandas as pd
+
 from src.hybrid import HybridRecommender
 from src.utils import load_config
+
 
 def demo_cli():
     print("Initializing Hybrid Recommendation Demo...")
@@ -11,14 +14,14 @@ def demo_cli():
     reviews_path = os.path.join(config['data']['paths']['processed_dir'], "reviews_processed.parquet")
     try:
         reviews_df = pd.read_parquet(reviews_path)
-    except Exception as e:
+    except Exception:
         print("Could not load reviews_processed.parquet. Please run Phase 1.")
         return
 
     hybrid = HybridRecommender(config)
     try:
         hybrid.load()
-    except Exception as e:
+    except Exception:
         print("Failed to load artifacts. Please train CB, CF, and Hybrid models first.")
         return
 

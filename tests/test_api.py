@@ -1,7 +1,8 @@
-import pytest
 from fastapi.testclient import TestClient
-from api.main import app
+
 from api.dependencies.model_dep import get_inference_service
+from api.main import app
+
 
 class MockInferenceService:
     initialized = True

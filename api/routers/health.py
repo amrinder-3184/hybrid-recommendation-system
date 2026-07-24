@@ -1,7 +1,8 @@
 from fastapi import APIRouter, Depends
+
 from api.dependencies.model_dep import get_inference_service
-from api.services.inference_service import InferenceService
 from api.schemas.responses import HealthResponse
+from api.services.inference_service import InferenceService
 
 router = APIRouter(tags=["system"])
 

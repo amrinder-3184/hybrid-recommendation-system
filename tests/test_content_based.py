@@ -1,9 +1,10 @@
 import os
-import pytest
+
 import pandas as pd
-import numpy as np
-import scipy.sparse as sp
+import pytest
+
 from src.content_based import ContentBasedRecommender
+
 
 @pytest.fixture
 def config(tmp_path):

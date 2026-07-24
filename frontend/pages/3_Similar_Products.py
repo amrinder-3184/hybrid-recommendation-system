@@ -1,5 +1,6 @@
-import streamlit as st
 import pandas as pd
+import streamlit as st
+
 from frontend.api_client import get_item_cb_similar, get_item_cf_similar
 
 st.set_page_config(page_title="Similar Products", page_icon="🛍️", layout="wide")

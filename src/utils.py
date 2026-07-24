@@ -1,8 +1,9 @@
 import logging
-import yaml
-import os
 from pathlib import Path
-from typing import Dict, Any
+from typing import Any
+
+import yaml
+
 
 def get_logger(name: str) -> logging.Logger:
     """
@@ -20,7 +21,7 @@ def get_logger(name: str) -> logging.Logger:
         
     return logger
 
-def load_config(config_path: str = "configs/config.yaml") -> Dict[str, Any]:
+def load_config(config_path: str = "configs/config.yaml") -> dict[str, Any]:
     """
     Loads configuration from a YAML file.
     """

@@ -1,10 +1,13 @@
 import os
-import pytest
-import pandas as pd
-import numpy as np
-import scipy.sparse as sp
 import pickle
+
+import numpy as np
+import pandas as pd
+import pytest
+import scipy.sparse as sp
+
 from src.collaborative import CollaborativeRecommender
+
 
 @pytest.fixture
 def config(tmp_path):

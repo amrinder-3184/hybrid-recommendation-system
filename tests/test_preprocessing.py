@@ -1,6 +1,8 @@
-import pytest
 import pandas as pd
+import pytest
+
 from src.preprocessing import DataPreprocessor
+
 
 @pytest.fixture
 def config():

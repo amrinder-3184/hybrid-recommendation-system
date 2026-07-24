@@ -1,8 +1,8 @@
 import os
+
 import pandas as pd
+
 from src.hybrid import HybridRecommender
-from src.content_based import ContentBasedRecommender
-from src.collaborative import CollaborativeRecommender
 from src.utils import get_logger, load_config
 
 logger = get_logger(__name__)
@@ -12,7 +12,7 @@ class InferenceService:
 
     def __new__(cls):
         if cls._instance is None:
-            cls._instance = super(InferenceService, cls).__new__(cls)
+            cls._instance = super().__new__(cls)
             cls._instance.initialized = False
         return cls._instance
 

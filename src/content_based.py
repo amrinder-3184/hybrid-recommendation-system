@@ -1,11 +1,13 @@
 import os
-import time
 import pickle
+import time
+
 import numpy as np
 import pandas as pd
 import scipy.sparse as sp
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
 from src.utils import get_logger, load_config
 
 logger = get_logger(__name__)
