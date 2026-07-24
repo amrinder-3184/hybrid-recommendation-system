@@ -1,0 +1,11 @@
+services:
+  # Deploy the FastAPI Backend to Render automatically
+  - type: web
+    name: hybrid-recommender-api
+    env: docker
+    dockerfilePath: ./Dockerfile.api
+    plan: free # Note: Render free tier spins down after 15 minutes of inactivity
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
