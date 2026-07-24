@@ -9,7 +9,6 @@ pytest-html==4.0.2
 jupyter==1.0.0
 matplotlib==3.7.2
 seaborn==0.12.2
-lightfm==1.17
 fastapi==0.103.1
 uvicorn==0.23.2
 pydantic==2.3.0
