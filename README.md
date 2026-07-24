@@ -111,3 +111,4 @@ Run integration and unit tests locally with:
 ```bash
 pytest tests/
 ```
+ECHO is on.
